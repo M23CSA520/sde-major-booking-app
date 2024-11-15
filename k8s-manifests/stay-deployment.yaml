@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: stay
-        image: gcr.io/your-project-id/stay:latest
+        image: gcr.io/sde-major-g39-booking-app/stay:latest
         ports:
         - containerPort: 5003
 
