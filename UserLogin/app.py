@@ -6,7 +6,7 @@ app = Flask(__name__)
 def login():
     if request.method == 'GET':
         # For GET request, return a welcome message or basic info
-        return jsonify({"message": "Welcome to the User Login service. Please POST your credentials."})
+        return jsonify({"message": "Welcome to the User Login service. Please POST your credentials."}), 200
 
     if request.method == 'POST':
         # For POST request, check the credentials
