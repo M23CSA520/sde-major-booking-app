@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: userlogin
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: userlogin
+  template:
+    metadata:
+      labels:
+        app: userlogin
+    spec:
+      containers:
+      - name: userlogin
+        image: gcr.io/your-project-id/userlogin:latest
+        ports:
+        - containerPort: 5001
+

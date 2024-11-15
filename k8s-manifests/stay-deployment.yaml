@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stay
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: stay
+  template:
+    metadata:
+      labels:
+        app: stay
+    spec:
+      containers:
+      - name: stay
+        image: gcr.io/your-project-id/stay:latest
+        ports:
+        - containerPort: 5003
+

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: localconveyance
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: localconveyance
+  template:
+    metadata:
+      labels:
+        app: localconveyance
+    spec:
+      containers:
+      - name: localconveyance
+        image: gcr.io/your-project-id/localconveyance:latest
+        ports:
+        - containerPort: 5004
+

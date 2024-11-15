@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: travel
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: travel
+  template:
+    metadata:
+      labels:
+        app: travel
+    spec:
+      containers:
+      - name: travel
+        image: gcr.io/your-project-id/travel:latest
+        ports:
+        - containerPort: 5002
+
