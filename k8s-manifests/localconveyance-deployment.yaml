@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: localconveyance
-        image: gcr.io/your-project-id/localconveyance:latest
+        image: gcr.io/sde-major-g39-booking-app/localconveyance:latest
         ports:
         - containerPort: 5004
 
