@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: travel
-        image: gcr.io/your-project-id/travel:latest
+        image: gcr.io/sde-major-g39-booking-app/travel:latest
         ports:
         - containerPort: 5002
 
